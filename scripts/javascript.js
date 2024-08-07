@@ -253,7 +253,6 @@ function calculate() {
             result = multiply(num1, num2);
             break;
     }
-    console.log(result)
     if (result !== null) {
         if (isInteger(result)) {
             result = Math.floor(result);
