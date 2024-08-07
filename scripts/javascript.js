@@ -105,6 +105,7 @@ function parseInput(event) {
         if (dividedByZero) {
             display.style.textAlign = "end"
             dividedByZero = false
+            clear();
         }
         switch (type) {
             case "operand":
