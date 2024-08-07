@@ -1,0 +1,110 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+:root {
+  --display-background: #0E131F;
+  --buttons-container-background: #F4FAFF;
+  --digit-button-background: #084668;
+  --operator-button-background: #820D43;
+  --special-button-background: #F6BD60;
+  --special-button-text-color: black;
+  --big-radius: 30px;
+  --small-radius: 4px;
+  --gap:4px;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 98vh;
+  width: 98vw;
+}
+
+.calculator {
+  border-radius: 30px;
+  box-shadow: grey 0 0 40px 5px;
+  max-width: 300px;
+  /*margin-bottom: 27.2vh;*/
+  /*margin-bottom: 10px*/
+  margin-bottom: calc(50vh - 262px)
+}
+
+.display {
+  box-sizing: border-box;
+  background-color: var(--display-background);
+  border-radius: var(--big-radius) var(--big-radius) 0 0 ;
+  padding: 16px;
+  min-height: 100px;
+  align-content: center;
+}
+
+.display-text {
+  color: white;
+  text-align: end;
+  font-size: 2em;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.calculator-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: var(--gap);
+  border-radius: 0 0 var(--big-radius) var(--big-radius);
+  padding: var(--gap);
+  background-color: var(--buttons-container-background);
+}
+
+.row {
+  display: flex;
+  flex-basis: 400px;
+  justify-content: center;
+  align-content: center;
+  gap: var(--gap);
+}
+
+button {
+  flex-basis: 100px;
+  height: 80px;
+  border-style: none;
+  border-radius: var(--small-radius);
+  padding: 0;
+}
+
+.double {
+  flex-grow: 4;
+  flex-basis: 204px;
+}
+
+.digit {
+  background-color: var(--digit-button-background);
+}
+
+.operator, .equal {
+  background-color: var(--operator-button-background);
+}
+
+.clear, .del, .special {
+  background-color: var(--special-button-background);
+  color: var(--special-button-text-color);
+}
+
+.top {
+  border-radius: 0 0 var(--small-radius) var(--small-radius)
+}
+
+.bottom-left {
+  border-bottom-left-radius: var(--big-radius);
+}
+
+.bottom-right {
+  border-bottom-right-radius: var(--big-radius);
+}
+
