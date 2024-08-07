@@ -34,10 +34,6 @@ function parseInput(event) {
     let type
     let value;
     const target = event.target;
-    if (dividedByZero) {
-        display.style.textAlign = "end"
-        dividedByZero = false
-    }
     if (event.type === "keydown") {
         let key = event.key
         if (isNumber(key)) {
@@ -106,6 +102,10 @@ function parseInput(event) {
         }
     }
     if (type !== undefined) {
+        if (dividedByZero) {
+            display.style.textAlign = "end"
+            dividedByZero = false
+        }
         switch (type) {
             case "operand":
                 if (lastType === "calculate") {
@@ -252,6 +252,7 @@ function calculate() {
             result = multiply(num1, num2);
             break;
     }
+    console.log(result)
     if (result !== null) {
         if (isInteger(result)) {
             result = Math.floor(result);
